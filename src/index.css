@@ -1,0 +1,276 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212529;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-bar {
+  background-color: #6741d9;
+  height: 5rem;
+  border-radius: .8rem;
+  padding: 0 2.5rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.logo span {
+  font-size: 3rem;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.search {
+  background-color: #7950f2;
+  border: none;
+  border-radius: .3rem;
+  width: 20rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  justify-self: center;
+}
+
+.search::placeholder {
+  color: #adb5bd;
+}
+
+.search:focus {
+  outline: none;
+  transform: translateY(-3px);
+  box-shadow: 0 2.5rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+.num-results {
+  color: white;
+  font-size: 1.2rem;
+  justify-self: end;
+}
+
+.main {
+  margin-top: 2.5rem;
+  height: calc(100vh - 5rem - 3*2.5rem);
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.box {
+  width: 40rem;
+  max-width: 40rem;
+  background-color: #2b3035;
+  border-radius: 0.4rem;
+  position: relative;
+  overflow: scroll;
+}
+
+.btn-toggle {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+  border: none;
+  background-color: #212529;
+  font-size: 1.2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+}
+
+.list {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: auto auto;
+  border-bottom: 0.1rem solid #343a40;
+  column-gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+}
+
+.list.list-movies li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.list.list-movies li:hover {
+  background-color: #343a40;
+}
+
+.list img {
+  width: 100%;
+  grid-row: 1 / -1;
+}
+
+.list h3 {
+  font-size: 1.4rem;
+  color: #adb5bd;
+}
+
+.list p {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
+}
+
+.list div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.summary {
+  background-color: #343a40;
+  color: #adb5bd;
+  padding: 1rem 2rem;
+  border-radius: 0.9rem;
+}
+
+.summary h1 {
+  text-transform: uppercase;
+}
+
+.summary div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.summary p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-delete {
+  position: absolute;
+  left: 20.5rem;
+  background-color: red;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: brown;
+}
+
+.loader {
+  font-size: 1.5rem;
+  color: #adb5bd;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.error {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #adb5bd;
+  margin-top: 10rem;
+}
+
+.btn-back {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.details {
+  color: #adb5bd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+
+}
+
+.details header {
+  display: flex;
+}
+
+.details section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem;
+
+}
+
+.details img {
+  width: 35%;
+}
+
+.details-overview {
+  display: flex;
+  flex-direction: column;
+  background-color: #343a40;
+  width: 100%;
+  padding: 1rem 2rem;
+  gap: 0.5rem;
+}
+
+.details-overview h2 {
+  margin-bottom: 1rem;
+}
+
+.rating {
+  background-color: #343a40;
+  border-radius: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.btn-add {
+  background-color: #6741d9;
+  color: #dee2e6;
+  border: none;
+  border-radius: 10rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
+
+.btn-add:hover {
+  background-color: #7950f2;
+}
