@@ -1,5 +1,6 @@
 # Movies_Project
 This project is a practice project from Jonas Schmedtmann React Course
+through this project I applied most of react fundamentals and and some important hooks like useState , useEffect, useRef and customHooks
 
 # Api that we used to fetch movies
 https://www.omdbapi.com/ 
